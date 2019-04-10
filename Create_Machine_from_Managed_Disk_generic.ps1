@@ -21,6 +21,8 @@
 # 
 ####################################################################################################################################################
 
+Import-Module Az
+Login-AzAccount
 
 
 $destresourceGroup = 'rg-bt01'                                 # Provide the name of the VM Destination Resource Group - Where VM will be created
@@ -45,7 +47,6 @@ $subscriptionId = 'a1234z2z-75e8-4c81-bcee-125585462146'       # Provide the sub
 $diskName = 'pfSense04092019'                                  # Provide the name of the Managed Disk- Must be different for each image
 $diskSize = '8'                                                # Provide the size of the disks in GB. It should be greater than the VHD file size.
 $storageType = 'Standard_LRS'                                  # Provide the storage type for Managed Disk. Premium_LRS or Standard_LRS.
-
 
 
 ##############################
